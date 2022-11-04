@@ -8,10 +8,9 @@ if [ ! -f /etc/network/if-up.d/custom-networkd-config ]; then
 	#Must replace old Apache-donated index.html 
 	cat > /var/www/html/index.html <<EOD
 <html><head><title>${HOSTNAME}</title></head><body><h1>${HOSTNAME}</h1>
-<p>Welcome to ${HOSTNAME}, Mr. Whyne.
+<p>Welcome to Utrains.
 <br>
-You should only see one unique webpage no matter how many times you refresh, ssh into the VM
-and stop apache2, then retry.</p>
+You redirected to ${HOSTNAME} to see how the load balancer is sharing the traffic. </p>
 </body></html>
 EOD
 	#Restart Service
